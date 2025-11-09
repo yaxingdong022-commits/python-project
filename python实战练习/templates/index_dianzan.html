@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>点赞系统</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>假日</td>
+        <td>点赞数</td>
+        <td>操作</td>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.num }}</td>
+        <td><a href="/dianzan?id={{ item.id }}">点赞</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
