@@ -35,6 +35,12 @@ class NewsAnalyzer:
             nltk.download('punkt', quiet=True)
         
         try:
+            nltk.data.find('tokenizers/punkt_tab')
+        except LookupError:
+            logger.info("Downloading NLTK punkt_tab tokenizer...")
+            nltk.download('punkt_tab', quiet=True)
+        
+        try:
             nltk.data.find('corpora/stopwords')
         except LookupError:
             logger.info("Downloading NLTK stopwords...")

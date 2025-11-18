@@ -33,34 +33,28 @@ class DateFilterPipeline:
             logger.warning("Article has no publication date, skipping")
             raise Exception("No publication date")
         
-        try:
-            # Parse publication date
-            pub_date = adapter.get("publication_date")
-            if isinstance(pub_date, str):
-                # Try to parse string date
-                try:
-                    pub_date = datetime.fromisoformat(pub_date.replace('Z', '+00:00'))
-                except ValueError:
-                    # Try alternative formats
-                    for fmt in ["%Y-%m-%d", "%Y-%m-%d %H:%M:%S", "%d %B %Y"]:
-                        try:
-                            pub_date = datetime.strptime(pub_date, fmt)
-                            break
-                        except ValueError:
-                            continue
-            
-            # Check if article is within date range
-            if isinstance(pub_date, datetime):
-                if pub_date < self.cutoff_date:
-                    logger.info(f"Article too old: {adapter.get('title')[:50]}")
-                    raise Exception("Article too old")
-            else:
-                logger.warning(f"Could not parse date: {adapter.get('publication_date')}")
-                
-        except Exception as e:
-            logger.debug(f"Date filtering error: {e}")
-            # Allow through if we can't parse the date
-            pass
+        # Parse publication date
+        pub_date = adapter.get("publication_date")
+        if isinstance(pub_date, str):
+            # Try to parse string date
+            try:
+                pub_date = datetime.fromisoformat(pub_date.replace('Z', '+00:00'))
+            except ValueError:
+                # Try alternative formats
+                for fmt in ["%Y-%m-%d", "%Y-%m-%d %H:%M:%S", "%d %B %Y"]:
+                    try:
+                        pub_date = datetime.strptime(pub_date, fmt)
+                        break
+                    except ValueError:
+                        continue
+        
+        # Check if article is within date range
+        if isinstance(pub_date, datetime):
+            if pub_date < self.cutoff_date:
+                logger.info(f"Article too old: {adapter.get('title')[:50]}")
+                raise Exception("Article too old")
+        else:
+            logger.warning(f"Could not parse date: {adapter.get('publication_date')}")
         
         return item
 

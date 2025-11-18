@@ -51,8 +51,8 @@ def test_date_filter_pipeline_old_article(test_spider, test_item):
     # Set old date
     test_item['publication_date'] = (datetime.now() - timedelta(days=10)).isoformat()
     
-    # Should raise exception
-    with pytest.raises(Exception):
+    # Should raise exception for old articles
+    with pytest.raises(Exception, match="Article too old"):
         pipeline.process_item(test_item, test_spider)
 
 
