@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商品列表 - 第2页</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .products { display: flex; flex-wrap: wrap; }
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            background-color: #f9f9f9;
+        }
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        .name { font-size: 16px; font-weight: bold; margin: 10px 0; }
+        .price { color: red; font-size: 18px; margin: 10px 0; }
+        .rating { color: orange; margin: 10px 0; }
+        a { color: blue; text-decoration: none; }
+        .pagination { margin-top: 30px; text-align: center; }
+        .next-page { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; }
+        .next-page:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>数码产品列表 - 第2页</h1>
+    <div class="products">
+        <div class="product" data-id="006">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Google Pixel 9 Pro</div>
+            <div class="price">¥7499</div>
+            <div class="rating">评分：4.7</div>
+            <a href="/product/006" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="007">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">OnePlus 12</div>
+            <div class="price">¥3999</div>
+            <div class="rating">评分：4.5</div>
+            <a href="/product/007" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="008">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Motorola Edge 50</div>
+            <div class="price">¥2999</div>
+            <div class="rating">评分：4.3</div>
+            <a href="/product/008" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="009">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Nokia G100</div>
+            <div class="price">¥1899</div>
+            <div class="rating">评分：4.0</div>
+            <a href="/product/009" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="010">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Realme GT 6</div>
+            <div class="price">¥3499</div>
+            <div class="rating">评分：4.6</div>
+            <a href="/product/010" class="detail-link">查看详情</a>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button class="next-page" onclick="goToNextPage(3)">下一页</button>
+    </div>
+
+    <script>
+        function goToNextPage(pageNum) {
+            window.location.href = `page${pageNum}.html`;
+        }
+    </script>
+</body>
+</html>

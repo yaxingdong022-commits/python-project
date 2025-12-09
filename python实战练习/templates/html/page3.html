@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商品列表 - 第3页</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .products { display: flex; flex-wrap: wrap; }
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            background-color: #f9f9f9;
+        }
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        .name { font-size: 16px; font-weight: bold; margin: 10px 0; }
+        .price { color: red; font-size: 18px; margin: 10px 0; }
+        .rating { color: orange; margin: 10px 0; }
+        a { color: blue; text-decoration: none; }
+        .pagination { margin-top: 30px; text-align: center; }
+        .end-message { padding: 10px 20px; font-size: 16px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>数码产品列表 - 第3页（最后一页）</h1>
+    <div class="products">
+        <div class="product" data-id="011">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Vivo X100 Pro</div>
+            <div class="price">¥6499</div>
+            <div class="rating">评分：4.7</div>
+            <a href="/product/011" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="012">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">ZTE Nubia Z60</div>
+            <div class="price">¥4999</div>
+            <div class="rating">评分：4.4</div>
+            <a href="/product/012" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="013">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Honor Magic 6 Pro</div>
+            <div class="price">¥5999</div>
+            <div class="rating">评分：4.8</div>
+            <a href="/product/013" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="014">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">Meizu 21</div>
+            <div class="price">¥4299</div>
+            <div class="rating">评分：4.5</div>
+            <a href="/product/014" class="detail-link">查看详情</a>
+        </div>
+
+        <div class="product" data-id="015">
+            <div class="product-image">[商品图片]</div>
+            <div class="name">iQOO 12 Pro</div>
+            <div class="price">¥5499</div>
+            <div class="rating">评分：4.9</div>
+            <a href="/product/015" class="detail-link">查看详情</a>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <span class="end-message">已是最后一页</span>
+    </div>
+</body>
+</html>

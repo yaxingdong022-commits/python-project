@@ -1,0 +1,77 @@
+﻿[
+  {
+    "id": "001",
+    "name": "Apple iPhone 15 Pro",
+    "price": "¥7999"
+  },
+  {
+    "id": "002",
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": "¥8999"
+  },
+  {
+    "id": "003",
+    "name": "小米14 Ultra",
+    "price": "¥5999"
+  },
+  {
+    "id": "004",
+    "name": "华为Mate 60 Pro",
+    "price": "¥6999"
+  },
+  {
+    "id": "005",
+    "name": "OPPO Find X7 Pro",
+    "price": "¥5499"
+  },
+  {
+    "id": "006",
+    "name": "Google Pixel 9 Pro",
+    "price": "¥7499"
+  },
+  {
+    "id": "007",
+    "name": "OnePlus 12",
+    "price": "¥3999"
+  },
+  {
+    "id": "008",
+    "name": "Motorola Edge 50",
+    "price": "¥2999"
+  },
+  {
+    "id": "009",
+    "name": "Nokia G100",
+    "price": "¥1899"
+  },
+  {
+    "id": "010",
+    "name": "Realme GT 6",
+    "price": "¥3499"
+  },
+  {
+    "id": "011",
+    "name": "Vivo X100 Pro",
+    "price": "¥6499"
+  },
+  {
+    "id": "012",
+    "name": "ZTE Nubia Z60",
+    "price": "¥4999"
+  },
+  {
+    "id": "013",
+    "name": "Honor Magic 6 Pro",
+    "price": "¥5999"
+  },
+  {
+    "id": "014",
+    "name": "Meizu 21",
+    "price": "¥4299"
+  },
+  {
+    "id": "015",
+    "name": "iQOO 12 Pro",
+    "price": "¥5499"
+  }
+]
