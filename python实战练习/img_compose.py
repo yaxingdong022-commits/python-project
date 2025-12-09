@@ -1,7 +1,7 @@
 from PIL import Image
 import os
-name=os.listdir('./templates/壁纸')
-im=Image.open('./templates/壁纸/壁纸26.jpg')
+name=os.listdir('templates/图片/壁纸')
+im=Image.open('templates/图片/壁纸/壁纸26.jpg')
 w,h=im.size
 
 img_row=4
